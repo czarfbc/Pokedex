@@ -4,23 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
-    <link href="style.css" rel="stylesheet"/>
+
+
+    <link href="assets/style/style.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="pokeball.ico" type="image/x-icon">
+
+
+    <script defer src="assets/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/fd1cb3abbc.js" crossorigin="anonymous"></script>
+
+    <title>Pokedex</title>
 </head>
 <body>
-    
-    <div class="main">
-        <h1>POKEDEX</h1>
-        <input id="quantidade" type="text" name="quantidade" placeholder="Insira a quantidade de pokemons..." />
-        <div class="cartas">
-            <!-- <div class="carta">
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png" />
-                <p>pode</p>
-            </div>    -->
+    <main>
+        <img class="pokemon_img" src="#" alt="pokemon">
+
+        <h1 class="pokemon_data">
+            <span class="pokemon_number"></span> - 
+            <span class="pokemon_name"></span>
+        </h1>
+
+        <form class="form">
+            <input class="input_search" type="search" placeholder="Name or Number" required>
+        </form>
+        
+        <div class="btns">
+            <button class="btn btn_prev">&lt; Prev</button>
+            <button class="btn btn_next">Next &gt;</button>
         </div>
 
-    </div>
+        <img class="pokedex" src="assets/media/pokedex-tec.png" alt="caderno pokemon">
+    </main>
+    <footer>
+        <div class="info">
+            <p>E-mail para contato: cezarfbc@gmail.com</p>
+            <p>Feito por Cézar Fernando</p>
+        </div>
 
+        <div class="link">
+            <a target="_blank" href="https://www.linkedin.com/in/cezar-fernando">
+                <i class="fa-brands fa-linkedin fa-4x"></i>
+            </a>
+            <a target="_blank" href="https://github.com/czarfbc">
+                <i class="fa-brands fa-square-github fa-4x"></i>
+            </a>
+        </div>
+    </footer>
 </body>
-<script src="functionality.js"></script>
 </html>

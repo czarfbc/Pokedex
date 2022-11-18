@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+*{
+    margin: 0px 0px;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    text-align: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #6ab7f5, #fff);
+}
+
+
+
+
+
+
+
+main{
+    display: inline-block;
+    margin-top: 2%; 
+    padding: 15px;
+    position: relative;
+}
+.pokedex{
+    width: 100%;
+    max-width: 425px;
+}
+.pokemon_img{
+    position: absolute;
+    bottom: 55%;
+    left: 50%;
+    transform: translate(-63%, 20%);
+    height: 18%;
+}
+.pokemon_data{
+    position: absolute;
+    font-weight: 600;
+    color: #aaa;
+    top: 55.5%;
+    right: 27%;
+    font-size: clamp(8px, 5vw, 18px);
+}
+.pokemon_name{
+    color: #3a444d;
+    text-transform: capitalize;
+}
+.form{
+    position: absolute;
+    width: 65%;
+    top: 65%;
+    left: 13.5%;
+}
+.input_search{
+    width: 100%;
+    padding: 4%;
+    outline: none;
+    border: 2px solid #333;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #3a444d;
+    font-size: clamp(8px, 5vw, 1rem);
+    box-shadow: -3px 4px 0 #888, -5px 7px 0 #333;
+}
+.btns{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    width: 65%;
+    transform: translate(-57%, 0);
+    display: flex;
+    gap: 20px;
+}
+.btn{
+    width: 50%;
+    padding: 4%;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-size: clamp(8px, 5vw, 1rem);
+    font-weight: 600;
+    color: white;
+    background-color: #444;
+    box-shadow: -2px 3px 0 #222, -4px 6px #000;
+}
+.btn:active{
+    box-shadow: inset -4px 4px #222;
+    font-size: 0.94rem;
+}
+
+
+
+footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+
+    position: absolute;
+    bottom: 0;
+    
+    align-items: center;
+    color: #000;
+    
+    text-align: center;
+    padding: 0 10px;
+}
+footer p{
+    font-weight: 600;
+    font-size: 18px;
+}
+footer a{
+    text-decoration: none;
+    color: #000;
+}
+@media (max-width: 550px){
+    footer{
+        display: block;
+    }
+    .info{
+        margin-bottom: 5px;
+    }
+}
+@media (max-width: 400px){
+    footer p{
+        font-size: 16px;
+    }
+}
+@media (max-width: 350px){
+    footer p{
+        font-weight: 700;
+        font-size: 10px;
+    }
+    footer a{
+        font-size: 10px;
+    }
+}
