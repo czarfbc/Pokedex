@@ -20,7 +20,7 @@ body{
 
 main{
     display: inline-block;
-    margin-top: 2%; 
+    margin: 2% 0 10% 0; 
     padding: 15px;
     position: relative;
 }
@@ -95,9 +95,6 @@ footer{
     display: flex;
     width: 100%;
     justify-content: space-around;
-
-    position: absolute;
-    bottom: 0;
     
     align-items: center;
     color: #000;
