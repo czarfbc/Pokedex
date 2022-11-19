@@ -1,5 +1,5 @@
-const namePokemon = document.querySelector('.pokemon_name');
-const idPokemon = document.querySelector('.pokemon_number');
+const nomePokemon = document.querySelector('.pokemon_nome');
+const idPokemon = document.querySelector('.pokemon_numero');
 const imgPokemon = document.querySelector('.pokemon_img');
 
 
@@ -24,7 +24,7 @@ const fetchPokemon = async (pokemon)=>{
 
 
 const renderpokemon = async (pokemon)=>{
-    namePokemon.innerHTML = 'Loanding...';
+    nomePokemon.innerHTML = 'Carregando...';
     idPokemon.innerHTML = '';
 
     const data = await fetchPokemon(pokemon);
@@ -32,7 +32,7 @@ const renderpokemon = async (pokemon)=>{
     if(data){
         imgPokemon.style.display = 'block';
 
-        namePokemon.innerHTML = data.name;
+        nomePokemon.innerHTML = data.name;
         idPokemon.innerHTML = data.id;
 
         imgPokemon.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
@@ -45,7 +45,7 @@ const renderpokemon = async (pokemon)=>{
 
     }else{
         imgPokemon.style.display = 'none';
-        namePokemon.innerHTML = 'Not found :(';
+        nomePokemon.innerHTML = 'Não Encontrado :(';
         
         idPokemon.innerHTML = '';
         input.value = '';
