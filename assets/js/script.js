@@ -58,11 +58,10 @@ form.addEventListener('submit', (event)=>{
     event.preventDefault();
     renderpokemon(input.value.toLowerCase());
 });
-submit.addEventListener('click', (event)=>{
+submit.addEventListener('click', ()=>{
     if(input.value != ""){
         renderpokemon(input.value.toLowerCase());
     }
-
 })
 prev.addEventListener('click', ()=>{
     if(searchPokemon > 1){
