@@ -1,12 +1,12 @@
-const nomePokemon = document.querySelector('.pokemon_nome');
-const idPokemon = document.querySelector('.pokemon_numero');
+const namePokemon = document.querySelector('.pokemon_name');
+const idPokemon = document.querySelector('.pokemon_number');
 const imgPokemon = document.querySelector('.pokemon_img');
 
 
 const form = document.querySelector('.form');
 const input = document.querySelector('.input_search');
 
-
+const submit = document.querySelector('.btn_submit')
 const prev = document.querySelector('.btn_prev');
 const next = document.querySelector('.btn_next');
 
@@ -24,7 +24,7 @@ const fetchPokemon = async (pokemon)=>{
 
 
 const renderpokemon = async (pokemon)=>{
-    nomePokemon.innerHTML = 'Carregando...';
+    namePokemon.innerHTML = 'Loanding...';
     idPokemon.innerHTML = '';
 
     const data = await fetchPokemon(pokemon);
@@ -32,7 +32,7 @@ const renderpokemon = async (pokemon)=>{
     if(data){
         imgPokemon.style.display = 'block';
 
-        nomePokemon.innerHTML = data.name;
+        namePokemon.innerHTML = data.name;
         idPokemon.innerHTML = data.id;
 
         imgPokemon.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
@@ -45,7 +45,7 @@ const renderpokemon = async (pokemon)=>{
 
     }else{
         imgPokemon.style.display = 'none';
-        nomePokemon.innerHTML = 'Não Encontrado :(';
+        namePokemon.innerHTML = 'Not Found :(';
         
         idPokemon.innerHTML = '';
         input.value = '';
@@ -58,6 +58,12 @@ form.addEventListener('submit', (event)=>{
     event.preventDefault();
     renderpokemon(input.value.toLowerCase());
 });
+submit.addEventListener('click', (event)=>{
+    if(input.value != ""){
+        renderpokemon(input.value.toLowerCase());
+    }
+
+})
 prev.addEventListener('click', ()=>{
     if(searchPokemon > 1){
         searchPokemon--;

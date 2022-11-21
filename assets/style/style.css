@@ -72,6 +72,7 @@ main{
     transform: translate(-57%, 0);
     display: flex;
     gap: 20px;
+
 }
 .btn{
     width: 50%;
@@ -88,7 +89,6 @@ main{
     box-shadow: inset -4px 4px #222;
     font-size: 0.94rem;
 }
-
 
 
 footer{
@@ -116,6 +116,11 @@ footer a{
     }
     .info{
         margin-bottom: 5px;
+    }
+}
+@media (max-width: 415px){
+    .btn{
+        font-size: clamp(8px, 5vw, 0.565rem);
     }
 }
 @media (max-width: 400px){
