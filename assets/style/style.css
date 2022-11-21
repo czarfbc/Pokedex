@@ -118,9 +118,12 @@ footer a{
         margin-bottom: 5px;
     }
 }
-@media (max-width: 415px){
+@media (max-width: 414px){
     .btn{
-        font-size: clamp(8px, 5vw, 0.565rem);
+        font-size: clamp(8px, 5vw, 0.5656rem);
+    }
+    .btn:active{
+        font-size: 0.54rem;
     }
 }
 @media (max-width: 400px){
