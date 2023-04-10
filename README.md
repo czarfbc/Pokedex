@@ -1,6 +1,6 @@
 # Pokedex
 
- ## Deploy: https://czar-pokedex.netlify.app/
+## [Deploy](https://czar-pokedex.netlify.app/)
  
  ### Sobre
  
